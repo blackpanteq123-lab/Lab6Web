@@ -1,0 +1,100 @@
+Tugas inih adalah mempresentasikan animation pada suatu pemograman dan inih adalah codingannya
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Anime Populer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1>🌸 Daftar Anime Populer 🌸</h1>
+    </header>
+
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">Tentang</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+
+    <section id="main">
+      <h2><div style="margin-bottom: 20px;">
+  <button id="hide-list" class="btn">Sembunyikan Daftar Anime</button>
+  <button id="show-list" class="btn">Tampilkan Daftar Anime</button>
+  <button id="animate-title" class="btn">Animasi Judul</button>
+</div>
+✨ Anime Favorit Banyak Orang ✨</h2>
+      <div class="anime-list">
+        <!-- Anime 1 -->
+        <div class="anime-box">
+          <img src="https://cdn.myanimelist.net/images/anime/10/47347.jpg" alt="Naruto Shippuden">
+          <h3>Naruto Shippuden</h3>
+          <p>Petualangan Naruto Uzumaki menuju cita-citanya menjadi Hokage.</p>
+        </div>
+
+        <!-- Anime 2 -->
+        <div class="anime-box">
+          <img src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg" alt="Demon Slayer">
+          <h3>Demon Slayer</h3>
+          <p>Tanjiro melawan iblis untuk menyelamatkan adiknya Nezuko.</p>
+        </div>
+
+        <!-- Anime 3 -->
+        <div class="anime-box">
+          <img src="https://cdn.myanimelist.net/images/anime/1517/100633.jpg" alt="Attack on Titan">
+          <h3>Attack on Titan</h3>
+          <p>Eren Yeager berjuang melawan para Titan demi kebebasan manusia.</p>
+        </div>
+
+        <!-- Anime 4 -->
+        <div class="anime-box">
+          <img src="https://cdn.myanimelist.net/images/anime/5/73199.jpg" alt="My Hero Academia">
+          <h3>My Hero Academia</h3>
+          <p>Midoriya berjuang menjadi pahlawan di dunia penuh kekuatan super.</p>
+        </div>
+
+        <!-- Anime 5 -->
+        <div class="anime-box">
+          <img src="https://cdn.myanimelist.net/images/anime/1987/121791.jpg" alt="Jujutsu Kaisen">
+          <h3>Jujutsu Kaisen</h3>
+          <p>Itadori Yuji berhadapan dengan kutukan setelah menelan jari Sukuna.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 AnimeList Project | Dibuat oleh Hatchibee 💫</p>
+    </footer>
+  </div>
+<script>
+$(document).ready(function(){
+    // Hide/Show daftar anime
+    $("#hide-list").click(function(){
+        $(".anime-list").hide(1000);
+    });
+    $("#show-list").click(function(){
+        $(".anime-list").show(1000);
+    });
+
+    // Animasi judul
+    $("#animate-title").click(function(){
+        $("header").animate({
+            fontSize: '40px',
+            opacity: '0.8'
+        }, 1000).animate({
+            fontSize: '24px',
+            opacity: '1'
+        }, 1000);
+    });
+
+    // Jadikan header bisa digeser
+    $("header").draggable();
+});
+</script>
+</body>
+</html>
